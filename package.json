@@ -4,7 +4,9 @@
     "description": "一个基于Vue框架的移动端模板",
     "main": "index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "dev": "node build/server.js",
+        "build": "rimraf ./dist && webpack --config build/webpack.prod.js",
+        "clean": "rimraf ./dist"
     },
     "repository": {
         "type": "git",
@@ -20,6 +22,7 @@
         "@babel/cli": "^7.6.0",
         "@babel/core": "^7.5.5",
         "@babel/preset-env": "^7.5.5",
-        "babel-loader": "^8.0.6"
+        "babel-loader": "^8.0.6",
+        "rimraf": "^3.0.0"
     }
 }
