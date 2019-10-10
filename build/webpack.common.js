@@ -1,5 +1,19 @@
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const path = require('path');
+const package = require('../package.json');
+
+const utils = {
+    externals() {
+        const externals = package.externals;
+
+        let ret = {};
+        for (var k in externals) {
+            ret[k] = externals[k].var;
+        }
+
+        return ret;
+    }
+};
 
 module.exports = {
     entry: {
@@ -81,12 +95,13 @@ module.exports = {
     ],
     resolve: {
         alias: {
-            '@': path.resolve('../src')
+            '@': path.resolve(__dirname, '../src')
         }
     },
+    externals: utils.externals(),  // 从输出的 bundle 中排除依赖的外部扩展
     output: {
-        filename: '[name].bundle.js',
-        path: path.resolve('../dist'),
+        filename: 'bundle/[name].min.js',
+        path: path.resolve(__dirname, '../dist'),
         publicPath: '/'
     }
 };

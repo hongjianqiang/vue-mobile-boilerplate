@@ -2,7 +2,7 @@
     "name": "vue-mobile-boilerplate",
     "version": "1.0.0",
     "description": "一个基于Vue框架的移动端模板",
-    "main": "index.js",
+    "main": "./src/main.js",
     "scripts": {
         "dev": "node build/server.js",
         "build": "rimraf ./dist && webpack --config build/webpack.prod.js",
