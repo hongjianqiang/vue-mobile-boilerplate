@@ -42,8 +42,6 @@ module.exports = {
                     options: { 
                         // 开启 CSS Modules
                         modules: true,
-                        // 自定义生成的类名
-                        localIdentName: '[local]_[hash:base64:8]',
                         importLoaders: 1,
                     }
                 },
@@ -53,10 +51,7 @@ module.exports = {
             test: /\.scss$/,
             use: [
                 'vue-style-loader',
-                {
-                    loader: 'css-loader',
-                    options: { modules: true },  // 开启 CSS Modules
-                },
+                'css-loader',
                 'sass-loader'
             ]
         }, {
