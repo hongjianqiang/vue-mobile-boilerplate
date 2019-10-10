@@ -1,0 +1,16 @@
+{
+    "presets": [
+        [
+            "@babel/preset-env",
+            {
+                "debug": false,
+                "useBuiltIns": "usage",
+                "targets": "> 0.25%, ios_saf > 7, not ie < 9",
+                "corejs": 3
+            }
+        ]
+    ],
+    "plugins": [
+        
+    ]
+}

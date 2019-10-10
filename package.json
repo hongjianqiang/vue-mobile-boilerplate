@@ -15,5 +15,10 @@
     "bugs": {
         "url": "https://github.com/hongjianqiang/vue-mobile-boilerplate/issues"
     },
-    "homepage": "https://github.com/hongjianqiang/vue-mobile-boilerplate#readme"
+    "homepage": "https://github.com/hongjianqiang/vue-mobile-boilerplate#readme",
+    "devDependencies": {
+        "@babel/cli": "^7.6.0",
+        "@babel/core": "^7.5.5",
+        "babel-loader": "^8.0.6"
+    }
 }
