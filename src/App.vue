@@ -1,36 +1,24 @@
 <template>
     <view-box ref="viewBox" body-padding-bottom="55px">
-        <div slot="header">这里是头部</div>
+        <div slot="header">header</div>
+        <v-x-header slot="header"></v-x-header>
 
         <router-view></router-view>
 
-        <tabbar slot="bottom">
-            <tabbar-item>
-                <img slot="icon" src="static/vux-2/src/assets/demo/icon_nav_button.png">
-                <span slot="label">Wechat</span>
-            </tabbar-item>
-            <tabbar-item show-dot>
-                <img slot="icon" src="static/vux-2/src/assets/demo/icon_nav_msg.png">
-                <span slot="label">Message</span>
-            </tabbar-item>
-            <tabbar-item selected link="/component/demo">
-                <img slot="icon" src="static/vux-2/src/assets/demo/icon_nav_article.png">
-                <span slot="label">Explore</span>
-            </tabbar-item>
-            <tabbar-item badge="2">
-                <img slot="icon" src="static/vux-2/src/assets/demo/icon_nav_cell.png">
-                <span slot="label">News</span>
-            </tabbar-item>
-        </tabbar>
+        <v-tabbar slot="bottom"></v-tabbar>
     </view-box>
 </template>
 
 <script>
-    import { ViewBox, Tabbar, TabbarItem } from 'vux';
+    import { ViewBox, } from 'vux';
+    import XHeader from '@/components/x-header';
+    import Tabbar from '@/components/tabbar';
 
     export default {
         components: {
-            ViewBox, Tabbar, TabbarItem
+            ViewBox,
+            [XHeader.name]: XHeader,
+            [Tabbar.name]: Tabbar,
         },
         mounted() {
             /**

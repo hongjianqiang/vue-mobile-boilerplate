@@ -54,6 +54,12 @@
                 "/static/vue/2.6.10/vue.min.js"
             ]
         },
+        "vue-i18n": {
+            "var": "VueI18n",
+            "files": [
+                "/static/vue-i18n/8.14.1/vue-i18n.min.js"
+            ]
+        },
         "vue-router": {
             "var": "VueRouter",
             "files": [
