@@ -93,7 +93,11 @@ module.exports = {
         }]
     },
     plugins: [
-        new CopyWebpackPlugin([{ from: 'static', to: 'static' }]),
+        new CopyWebpackPlugin([{ 
+            from: 'static', to: 'static' 
+        }, {
+            from: 'src/images/favicon.png', to: '.'
+        }]),
     ],
     resolve: {
         extensions: ['.wasm', '.mjs', '.js', '.json', '.vue'],
