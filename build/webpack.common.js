@@ -96,6 +96,7 @@ module.exports = {
         new CopyWebpackPlugin([{ from: 'static', to: 'static' }]),
     ],
     resolve: {
+        extensions: ['.wasm', '.mjs', '.js', '.json'],
         alias: {
             '@': path.resolve(__dirname, '../src')
         }
