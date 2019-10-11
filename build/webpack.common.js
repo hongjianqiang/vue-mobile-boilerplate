@@ -98,6 +98,7 @@ module.exports = {
     resolve: {
         extensions: ['.wasm', '.mjs', '.js', '.json', '.vue'],
         alias: {
+            'vux': path.resolve(__dirname, '../src/components/vux'),
             '@': path.resolve(__dirname, '../src')
         }
     },

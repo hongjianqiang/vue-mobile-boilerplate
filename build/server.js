@@ -73,6 +73,7 @@ app.use(devInstance);
 app.use(hotInstance);
 
 devInstance.waitUntilValid(() => {
+    console.clear();
     console.log(`\n> Listening at http://localhost:${PORT}`);
     console.log(`> Main Page http://localhost:${PORT}\n`);
 });

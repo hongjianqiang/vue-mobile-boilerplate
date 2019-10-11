@@ -1,9 +1,37 @@
 <template>
-    <router-view></router-view>
+    <view-box ref="viewBox" body-padding-bottom="55px">
+        <div slot="header">这里是头部</div>
+
+        <router-view></router-view>
+
+        <tabbar slot="bottom">
+            <tabbar-item>
+                <img slot="icon" src="static/vux-2/src/assets/demo/icon_nav_button.png">
+                <span slot="label">Wechat</span>
+            </tabbar-item>
+            <tabbar-item show-dot>
+                <img slot="icon" src="static/vux-2/src/assets/demo/icon_nav_msg.png">
+                <span slot="label">Message</span>
+            </tabbar-item>
+            <tabbar-item selected link="/component/demo">
+                <img slot="icon" src="static/vux-2/src/assets/demo/icon_nav_article.png">
+                <span slot="label">Explore</span>
+            </tabbar-item>
+            <tabbar-item badge="2">
+                <img slot="icon" src="static/vux-2/src/assets/demo/icon_nav_cell.png">
+                <span slot="label">News</span>
+            </tabbar-item>
+        </tabbar>
+    </view-box>
 </template>
 
 <script>
+    import { ViewBox, Tabbar, TabbarItem } from 'vux';
+
     export default {
+        components: {
+            ViewBox, Tabbar, TabbarItem
+        },
         mounted() {
             /**
              * 解决移动端input输入框失去焦点时，页面视觉不能回弹的问题
@@ -15,14 +43,18 @@
     }
 </script>
 
-<style lang="scss">
-    @import '/static/normalize/8.0.1/normalize.min.css';
+<style lang="less">
+    @import '~@/../static/vux-2/src/styles/reset.less';
+    @import '~@/../static/vux-2/src/styles/1px.less';
+    @import '~@/../static/vux-2/src/styles/tap.less';
+</style>
 
-    body {
-        width: 100%;
+<style lang="scss">
+    html, body {
         height: 100%;
-        position: absolute;
-        overflow: hidden;
+        width: 100%;
+        overflow-x: hidden;
+        overflow-y: hidden;
         -webkit-overflow-scrolling: touch;  // 解决iOS下会出现局部滚动不流畅的bug
     }
 
