@@ -21,5 +21,11 @@ module.exports = merge(common, {
         new UglifyJSPlugin({
             test: /\.js(\?.*)?$/i,
         })
-    ]
+    ],
+    performance: {
+        assetFilter(assetFilename) {
+            // 排除 .map .lock .json 文件的性能提示
+            return !(/\.(map|lock|json)$/.test(assetFilename));
+        }
+    }
 });
