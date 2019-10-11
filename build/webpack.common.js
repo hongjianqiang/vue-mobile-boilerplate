@@ -48,6 +48,13 @@ module.exports = {
                 'postcss-loader'
             ]
         }, {
+            test: /\.less$/,
+            use: [
+                'vue-style-loader',
+                'css-loader',
+                'less-loader'
+            ]
+        }, {
             test: /\.scss$/,
             use: [
                 'vue-style-loader',
