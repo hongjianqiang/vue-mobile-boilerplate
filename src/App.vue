@@ -11,7 +11,7 @@
 
 <i18n>
 back_text:
-  en: Back
+  en: Backl
   zh-CN: 返回
 </i18n>
 
@@ -27,9 +27,7 @@ back_text:
             [Tabbar.name]: Tabbar,
         },
         mounted() {
-            this._i18n.setLocaleMessage('zh-CN', 'back_text');
-
-            console.log(this._i18n.setLocaleMessage);
+            console.log(this.$i18n);
 
             /**
              * 解决移动端input输入框失去焦点时，页面视觉不能回弹的问题

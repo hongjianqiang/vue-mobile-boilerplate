@@ -6,6 +6,10 @@ import App from './App.vue';
 Vue.config.productionTip = false; // 不显示启动时生成的生产提示
 Vue.config.devtools = true;
 
+const i18n = new VueI18n({
+    locale: 'zh-CN'
+});
+
 const routes = [{ 
     path: '/', 
     component: ()=>import('@/pages/home/home.vue')
@@ -19,11 +23,11 @@ const router = new VueRouter({
     routes
 });
 
-Vue.use(VueI18n);
 Vue.use(VueRouter);
 
 new Vue({
     el: '#App',
+    i18n,
     router,
     template: '<App/>',
     components: {

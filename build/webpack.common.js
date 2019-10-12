@@ -31,6 +31,10 @@ module.exports = {
             type: 'javascript/auto',
             use: [
                 '@kazupon/vue-i18n-loader',
+                {
+                    loader: path.resolve('build/loaders/reverseI18n.js'),
+                    options: {/* ... */}
+                },
                 'yaml-loader',
             ]
         }, { 
