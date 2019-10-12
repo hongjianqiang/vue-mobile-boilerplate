@@ -1,6 +1,6 @@
 <template>
     <view-box ref="viewBox" body-padding-bottom="55px">
-        <div slot="header">header</div>
+        <div slot="header">{{ $t('back_text') }}</div>
         <v-x-header slot="header"></v-x-header>
 
         <router-view></router-view>
@@ -8,6 +8,12 @@
         <v-tabbar slot="bottom"></v-tabbar>
     </view-box>
 </template>
+
+<i18n>
+back_text:
+  en: Back
+  zh-CN: 返回
+</i18n>
 
 <script>
     import { ViewBox, } from 'vux';
@@ -21,6 +27,10 @@
             [Tabbar.name]: Tabbar,
         },
         mounted() {
+            this._i18n.setLocaleMessage('zh-CN', 'back_text');
+
+            console.log(this._i18n.setLocaleMessage);
+
             /**
              * 解决移动端input输入框失去焦点时，页面视觉不能回弹的问题
              */

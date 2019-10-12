@@ -1,4 +1,5 @@
 import Vue from 'vue';
+import VueI18n from 'vue-i18n';
 import VueRouter from 'vue-router';
 import App from './App.vue';
 
@@ -18,6 +19,7 @@ const router = new VueRouter({
     routes
 });
 
+Vue.use(VueI18n);
 Vue.use(VueRouter);
 
 new Vue({

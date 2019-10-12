@@ -26,6 +26,13 @@ module.exports = {
             options: {
                 hotReload: true  // 显式开启热重载(默认为true)
             }
+        }, {
+            resourceQuery: /blockType=i18n/,
+            type: 'javascript/auto',
+            use: [
+                '@kazupon/vue-i18n-loader',
+                'yaml-loader',
+            ]
         }, { 
             test: /\.js$/, 
             loader: 'babel-loader',
