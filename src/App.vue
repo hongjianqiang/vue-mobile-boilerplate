@@ -1,6 +1,5 @@
 <template>
     <view-box ref="viewBox" body-padding-bottom="55px">
-        <div slot="header">{{ $t('back_text') }}</div>
         <v-x-header slot="header"></v-x-header>
 
         <router-view></router-view>
@@ -8,12 +7,6 @@
         <v-tabbar slot="bottom"></v-tabbar>
     </view-box>
 </template>
-
-<i18n>
-back_text:
-  en: Backl
-  zh-CN: 返回
-</i18n>
 
 <script>
     import { ViewBox, } from 'vux';

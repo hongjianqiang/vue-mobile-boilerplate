@@ -1,8 +1,14 @@
 <template>
     <x-header :right-options="{showMore: true}" 
         @on-click-more="showMenus = true"
-    >首页</x-header>
+    >{{$t('home')}}</x-header>
 </template>
+
+<i18n>
+home:
+    en: Home
+    zh-CN: 首页
+</i18n>
 
 <script>
     import { XHeader } from 'vux';

@@ -7,7 +7,7 @@ Vue.config.productionTip = false; // 不显示启动时生成的生产提示
 Vue.config.devtools = true;
 
 const i18n = new VueI18n({
-    locale: 'zh-CN'
+    locale: 'zh-CN'  // 默认语言
 });
 
 const routes = [{ 
